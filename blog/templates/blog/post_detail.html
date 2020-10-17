@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="contianer">
+  <h1>{{post.title}}   <a class=" btn btn-info btn-sm" href="{% url 'blog:analysis_detail' pk=post.pk %}">Analysis</a> </h1>
+  <p>author : {{post.author}} </p>
+  <p>{{post.created_date}} ,<span id='post'>{{post.post_views}}</span> viewd </p>
+
+<h5 class="postcontent">{{post.content|safe|linebreaksbr}}</h5>
+</div>
+
+<h5></h5>
+
+{% if user == post.author %}
+<a class="btn btn-primary btn-sm" href="{% url 'blog:post_edit' pk=post.pk %}">Edit</a>
+<a class="btn btn-danger btn-sm" href="{% url 'blog:post_remove' pk=post.pk %}">Delete</a>
+{% endif %}
+
+
+
+
+<hr>
+
+<div class="main-comment-section">
+  {% include 'blog/comments.html' with post=post form=form %}
+</div>
+
+{% endblock %}

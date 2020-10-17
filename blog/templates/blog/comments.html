@@ -1,0 +1,20 @@
+<div class="container-fluid mt-2">
+  <div class="form-group-row">
+    <form class="comment-form" action="{% url 'blog:post_detail' pk=post.pk %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" class=" btn btn-primary btn-sm" id='update'>Reply</button>
+    </form>
+  </div>
+</div>
+
+<br>
+<h5>Comments (<span id='comment'>{{post.comments.all.count}}</span>) :</h5>
+
+{% for comment in post.comments.all %}
+<div class="container mt-5" >
+  <h6> {{comment.author}} said at {{comment.created_date}} : </h6>
+  <h6> {{comment.content}}  </h6>
+</div>
+
+{% endfor %}
