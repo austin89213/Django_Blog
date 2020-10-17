@@ -1,6 +1,5 @@
 
 
-
 var post = Number(document.getElementById("post-viewd").innerHTML);
 console.log(typeof(post));
 var comment = {
@@ -11,8 +10,8 @@ var uncomment = {
     name: "僅觀看未留言 ",
     value: post-comment.value
 };
-/*------set value here-----*/
-//change data to pie
+
+//trans data to the pie chart
 var dataset = [comment,uncomment];
 var pie = d3.pie()
             .value(d => d.value);
@@ -44,7 +43,7 @@ var g = svg.selectAll(".arc")
             .enter().append("g")
             .attr("class", "arc");
 
-//draw pie and set color
+//draw pie chart and set color
 g.append("path")
     .attr("d", arc)
     .style("fill", function(d) {
