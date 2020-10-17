@@ -3,9 +3,8 @@
 {% block content %}
 <div class="contianer">
   <h1>{{post.title}}</h1>
-  <p> Total Viewd: {{post.post_views}} </p>
-
-
+  <p> Total Viewd: <span id='post-viewd'> {{post.post_views}} </span></p>
+  <p> Comments: <span id='comments'> {{post.comments.all.count}} </span></p>
 {% include "blog/pie_chart.html" %}
 
 {% endblock %}
