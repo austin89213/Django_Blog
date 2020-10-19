@@ -20,11 +20,11 @@ A Django Blog built with basic CRUD, Asynchronous and D3.js
 
 # Tech & Tools
 - Backend:
-   - [Django (3.0.3)] (https://www.djangoproject.com/)
+   - Django (3.0.3) (https://www.djangoproject.com/)
 - Frontend:
-   - [Bootstrap (4)] (https://getbootstrap.com/)
-   - [jQuery (3.5)] (https://jquery.com/)
-   - [D3.js (6.2)] (https://d3js.org/)
+   - Bootstrap (4) (https://getbootstrap.com/)
+   - jQuery (3.5) (https://jquery.com/)
+   - D3.js (6.2) (https://d3js.org/)
 
 # To use:
 - 1. Run git clone https://github.com/austin89213/Django_Blog in terminal / cmd to stroe or download the file
