@@ -23,8 +23,8 @@ class BookResource(resources.ModelResource):
 
 #     class Meta:
 #         model = Book
-        fields = ('id', 'name', 'author', 'price',)
-        export_order = ('id', 'price', 'author', 'name')
+        # fields = ('id', 'name', 'author', 'price',)
+        # export_order = ('id', 'price', 'author', 'name')
 
 @admin.register(Book)
 class BookAdmin(ImportExportActionModelAdmin):
