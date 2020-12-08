@@ -25,7 +25,7 @@ SECRET_KEY = 'nsn*6bqjug()#)stnb38gsuqwmmp(6%x_hxv5mifu)#12_40z$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'blog',
+    'book'
 
 ]
 
