@@ -20,7 +20,7 @@ A Django Blog built with basic CRUD, Asynchronous and D3.js
 
 # Tech & Tools
 - Backend:
-   - Django (3.0.3) (https://www.djangoproject.com/)
+   - Django (2.1.7) (https://www.djangoproject.com/)
 - Frontend:
    - Bootstrap (4) (https://getbootstrap.com/)
    - jQuery (3.5) (https://jquery.com/)
@@ -28,7 +28,7 @@ A Django Blog built with basic CRUD, Asynchronous and D3.js
 
 # To use:
 - 1. Run git clone https://github.com/austin89213/Django_Blog in terminal / cmd to stroe or download the file
-- 2. Create an venv with Python 3 and Django
+- 2. Create an venv with Python 3 and Django 2.1.7
 - 3. Run terminal / cmd and cd to the directory
 - 4. Run python manage.py createsuperuser for the logging in
 - 5. Run python manage.py runserver
