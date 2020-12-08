@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+  <h2>Please Login:</h2>
+
+  {% if forms.errors %}
+  <p>Username and password didn't match, please try again</p>
+  {% endif %}
+
+  <form class="container" action="{% url 'accounts:login' %}" method="post">
+    {% csrf_token %}
+     {{ form.as_p }}
+     <input type="submit" class="btn btn-primary" value="Login">
+     <input type="hidden" name="next" value="{{ next }}">
+  </form>
+</div>
+{% endblock %}
